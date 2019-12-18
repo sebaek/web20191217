@@ -1,0 +1,10 @@
+div {
+    background-color: aqua;
+    color: tomato;
+}
+
+span {
+    background-color: teal;
+    border: 5px solid black;
+    color: white;
+}
