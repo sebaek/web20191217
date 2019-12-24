@@ -26,6 +26,26 @@
             document.getElementById("result").innerHTML =
                 num1 / num2;
         }
+
+        function minus() {
+            var num1 = document.getElementById("input1").value;
+            var num2 = document.getElementById("input2").value;
+            // console.log(num1);
+            // console.log(num2);
+            // console.log(num1 * num2);
+            document.getElementById("result").innerHTML =
+                num1 - num2;
+        }
+
+        function reminder() {
+            var num1 = document.getElementById("input1").value;
+            var num2 = document.getElementById("input2").value;
+            // console.log(num1);
+            // console.log(num2);
+            // console.log(num1 * num2);
+            document.getElementById("result").innerHTML =
+                num1 % num2;
+        }
     </script>
 </head>
 
@@ -34,8 +54,8 @@
     <input id="input2" type="text"><br>
     <button onclick="times()">&times;</button>
     <button onclick="divide()">&divide;</button>
-    <button>&minus;</button>
-    <button>&percnt;</button>
+    <button onclick="minus()">&minus;</button>
+    <button onclick="reminder()">&percnt;</button>
     <div id="result"></div>
 </body>
 
