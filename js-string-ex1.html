@@ -18,6 +18,14 @@
             document.getElementById("result2").innerHTML = index;
 
         }
+        function showSlice() {
+            var text = document.getElementById("input4").value;
+            var start = document.getElementById("input5").value;
+            var end = document.getElementById("input6").value;
+
+            document.getElementById("reuslt3").innerHTML = 
+                text.slice(start, end);
+        }
     </script>
 </head>
 <body>
@@ -25,10 +33,18 @@
     <button onclick="showLength()">텍스트의 길이 표시</button>
     <div id="result"></div>
     
-    <br>
+    <hr>
     <input type="text" id="input2"><br>
     <input type="text" id="input3"><br>
     <button onclick="showIndexOf()">위치 찾기</button>
     <div id="result2"></div>
+
+    <hr>
+
+    <input type="text" id="input4"><br>
+    <input type="number" id="input5"><br>
+    <input type="number" id="input6"><br>
+    <button onclick="showSlice()">텍스트 자르기</button>
+    <div id="result3"></div>
 </body>
 </html>
