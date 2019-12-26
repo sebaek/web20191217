@@ -10,7 +10,10 @@
         var person = {
             name: "뽀로로",
             age: 50,
-            color: "black"
+            color: "black",
+            intro: function () {
+                console.log("안녕하세요.");
+            }
         };
 
         console.log(person.name);
@@ -26,7 +29,7 @@
         console.log(person.name);
         console.log(person["name"]);
         
-        
+        person.intro();
         
     </script>
 </head>
