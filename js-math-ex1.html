@@ -7,14 +7,27 @@
     <title>Document</title>
     <script>
     function showRandom() {
+        document.getElementById("result1").innerHTML =
+            getRandom();
+    }
+
+    function getRandom() {
         var random = Math.random();
-        document.getElementById("result").innerHTML = random;
+        random = random * 45;
+        random = Math.floor(random);
+        random = random + 1;
+        return random;
     }
     </script>
 </head>
 <body>
     <button onclick="showRandom()">새로운 수 출력</button>
-    <div id="result"></div>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result6"></div>
     
 </body>
 </html>
