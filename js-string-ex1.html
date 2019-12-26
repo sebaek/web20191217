@@ -34,6 +34,18 @@
             var result = origin.replace(text1, text2);
             document.getElementById("result4").innerHTML = result;
         }
+
+        function showUpperCase() {
+            var text = document.getElementById("input10").value;
+            document.getElementById("result5").innerHTML = 
+                text.toUpperCase();
+        }
+
+        function showLowerCase() {
+            var text = document.getElementById("input10").value;
+            document.getElementById("result5").innerHTML = 
+                text.toLowerCase();
+        }
     </script>
 </head>
 <body>
@@ -61,6 +73,12 @@
     <input type="text" id="input9"><br>
     <button onclick="showReplace()">스트링 교체</button>
     <div id="result4"></div>
+
+    <hr>
+    <input type="text" id="input10"><br>
+    <button onclick="showUpperCase()">대문자로 변경</button>
+    <button onclick="showLowerCase()">소문자로 변경</button>
+    <div id="result5"></div>
 
     <br>
     <br>
