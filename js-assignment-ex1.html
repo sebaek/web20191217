@@ -46,12 +46,25 @@
             document.getElementById("result").innerHTML =
                 num1 % num2;
         }
+
+        function plus() {
+            var num1 = document.getElementById("input1").value;
+            var num2 = document.getElementById("input2").value;
+            num1 = Number(num1);
+            num2 = Number(num2);
+            // console.log(num1);
+            // console.log(num2);
+            // console.log(num1 * num2);
+            document.getElementById("result").innerHTML =
+                num1 + num2;
+        }
     </script>
 </head>
 
 <body>
     <input id="input1" type="text"><br>
     <input id="input2" type="text"><br>
+    <button onclick="plus()">&plus;</button>
     <button onclick="times()">&times;</button>
     <button onclick="divide()">&divide;</button>
     <button onclick="minus()">&minus;</button>
