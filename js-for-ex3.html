@@ -13,7 +13,12 @@
             listItems.push(text);
 
             var ulInnerHtml = ""
-            for (var i = 0; i < listItems.length; i++) {
+
+            // for (var item of listItems) {
+            //     ulInnerHtml += "<li>" + item + "</li>";
+            // }
+
+            for (var i = listItems.length - 1; i >= 0; i--) {
                 ulInnerHtml += "<li>" + listItems[i] + "</li>";
             }
 
