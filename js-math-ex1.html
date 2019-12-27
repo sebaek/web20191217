@@ -24,27 +24,42 @@
     </style>
     <script>
         function showRandom() {
-            var numbers = [3, 5, 11, 99, 100, -1];
+            var numbers = [];
 
-            numbers[0] = getRandom();
-            numbers[1] = getRandom();
-            numbers[2] = getRandom();
-            numbers[3] = getRandom();
-            numbers[4] = getRandom();
-            numbers[5] = getRandom();
+            console.log(numbers.length);
+
+            numbers.push(getRandom());
+            numbers.push(getRandom());
+            numbers.push(getRandom());
+            numbers.push(getRandom());
+            numbers.push(getRandom());
+            numbers.push(getRandom());
+
+            console.log(numbers.length);
+
+
+            // numbers[0] = getRandom();
+            // numbers[1] = getRandom();
+            // numbers[2] = getRandom();
+            // numbers[3] = getRandom();
+            // numbers[4] = getRandom();
+            // numbers[5] = getRandom();
 
             document.getElementById("result1").innerHTML =
-                numbers[0];
+                numbers.pop();
             document.getElementById("result2").innerHTML =
-                numbers[1];
+                numbers.pop();
             document.getElementById("result3").innerHTML =
-                numbers[2];
+                numbers.pop();
             document.getElementById("result4").innerHTML =
-                numbers[3];
+                numbers.pop();
             document.getElementById("result5").innerHTML =
-                numbers[4];
+                numbers.pop();
             document.getElementById("result6").innerHTML =
-                numbers[5];
+                numbers.pop();
+
+            console.log(numbers.length);
+            
         }
 
         function getRandom() {
