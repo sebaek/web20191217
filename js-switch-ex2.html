@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+
+    <script>
+        function changeImg() {
+            var text = document.getElementById("input1").value;
+            switch (text) {
+                case "토르":
+                case "thor":
+                    document.getElementById("img1").src = "토르.jpg"
+                    break;
+
+                case "캡틴":
+                case "cap":
+                    document.getElementById("img1").src = "캡틴.jpg"
+                    break;
+                default:
+                    document.getElementById("img1").src = "어벤져스.jpg"
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="input1" onkeyup="changeImg()"><br>
+    <img id="img1" src="어벤져스.jpg" alt="">
+</body>
+
+</html>
