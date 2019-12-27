@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var array = [];
+
+        function unshift() {
+            var item = document.getElementById("input1").value;
+            array.unshift(item);
+            document.getElementById("result").innerHTML = array;
+        }
+
+        function shift() {
+            array.shift();
+            document.getElementById("result").innerHTML = array;
+        }
+
+        function push() {
+            var item = document.getElementById("input1").value;
+            array.push(item);
+            document.getElementById("result").innerHTML = array;
+        }
+
+        function pop() {
+            array.pop();
+            document.getElementById("result").innerHTML = array;
+        }
+    
+    </script>
+</head>
+<body>
+    <input type="text" id="input1"><br>
+    <button onclick="unshift()">앞에 추가</button>
+    <button onclick="shift()">앞에서 삭제</button>
+    <button onclick="push()">뒤에 추가</button>
+    <button onclick="pop()">뒤에서 삭제</button>
+    <div id="result"></div>
+</body>
+</html>
