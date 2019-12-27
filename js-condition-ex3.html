@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function setDart() {
+        var checkbox = document.getElementById("c1");
+        if (checkbox.checked) {
+            document.getElementById("d1").style.backgroundColor = "black";
+            document.getElementById("d1").style.color = "white";
+        } else {
+            document.getElementById("d1").style.backgroundColor = "white";
+            document.getElementById("d1").style.color = "black";
+        }
+    }
+    </script>
+</head>
+<body>
+    <input onclick="setDark()" type="checkbox" name="" id="c1"> 다크모드
+
+    <div id="d1">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, rem! Eveniet ipsa a assumenda amet, adipisci nulla temporibus enim minus sunt id iusto exercitationem necessitatibus facere harum repellat labore fugiat!
+    </div>
+</body>
+</html>
