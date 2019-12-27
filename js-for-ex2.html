@@ -42,19 +42,12 @@
             // numbers[4] = getRandom();
             // numbers[5] = getRandom();
 
-            document.getElementById("result1").innerHTML =
-                numbers.pop();
-            document.getElementById("result2").innerHTML =
-                numbers.pop();
-            document.getElementById("result3").innerHTML =
-                numbers.pop();
-            document.getElementById("result4").innerHTML =
-                numbers.pop();
-            document.getElementById("result5").innerHTML =
-                numbers.pop();
-            document.getElementById("result6").innerHTML =
-                numbers.pop();
-
+            for (var i = 1; i <= 6; i++) {
+                var id = "result" + i;
+                document.getElementById(id).innerHTML =
+                    numbers.pop();
+            }
+            
             console.log(numbers.length);
             
         }
