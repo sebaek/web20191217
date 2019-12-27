@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var listItems = [];
+
+        function addList() {
+            var text = document.getElementById("input").value;
+            listItems.push(text);
+
+            var ulInnerHtml = ""
+            for (var i = 0; i < listItems.length; i++) {
+                ulInnerHtml += "<li>" + listItems[i] + "</li>";
+            }
+
+            document.getElementById("result").innerHTML = 
+                ulInnerHtml;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button onclick="addList()">&plus;</button>
+
+    <ul id="result"></ul>
+
+</body>
+</html>
