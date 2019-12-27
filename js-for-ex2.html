@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        /* .item {
+        .item {
             width: 50px;
             height: 50px;
             color: white;
@@ -20,7 +20,7 @@
             box-sizing: border-box;
             border-radius: 50%;
             box-shadow: 2px 4px 7px rgba(0,0,0,0.45);
-        } */
+        }
     </style>
     <script>
         function showRandom() {
@@ -28,12 +28,9 @@
 
             console.log(numbers.length);
 
-            numbers.push(getRandom());
-            numbers.push(getRandom());
-            numbers.push(getRandom());
-            numbers.push(getRandom());
-            numbers.push(getRandom());
-            numbers.push(getRandom());
+            for (var i = 0; i < 6; i++) {
+                numbers.push(getRandom());
+            }
 
             console.log(numbers.length);
 
