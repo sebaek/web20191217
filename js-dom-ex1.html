@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 50px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 900;
+            font-size: 28px;
+            background-color: blue;
+            margin: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            box-shadow: 2px 4px 7px rgba(0,0,0,0.45);
+        }
+    </style>
+    <script>
+        function showRandom() {
+            var numbers = [];
+
+            while (numbers.length < 6) {
+                var newNumber = getRandom();
+                if (!numbers.includes(newNumber)) {
+                    numbers.push(newNumber);
+                }
+            }
+
+            var i = 1;
+            while (numbers.length > 0) {
+                var id = "result" + i;
+                i++;
+
+                var elem = document.getElementById(id);
+                setValueAndStyle(elem, numbers.pop());
+            }
+        }
+
+        function setValueAndStyle(elem, num) {
+            elem.innerHTML = num;
+            if (num < 10) {
+                elem.style.backgroundColor = "green";
+                elem.style.color = "white";
+            } else if (10 <= num && num < 20) {
+                elem.style.backgroundColor = "red";
+                elem.style.color = "white";
+            } else if (20 <= num && num < 30) {
+                elem.style.backgroundColor = "yellow";
+                elem.style.color = "black";
+            } else if (30 <= num && num < 40) {
+                elem.style.backgroundColor = "blue";
+                elem.style.color = "white";
+            } else {
+                elem.style.backgroundColor = "grey";
+                elem.style.color = "white";
+            }
+        }
+
+        function getRandom() {
+            var random = Math.random();
+            random = random * 45;
+            random = Math.floor(random);
+            random = random + 1;
+            return random;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="showRandom()">새로운 수 출력</button>
+    <div id="result1" class="item"></div>
+    <div id="result2" class="item"></div>
+    <div id="result3" class="item"></div>
+    <div id="result4" class="item"></div>
+    <div id="result5" class="item"></div>
+    <div id="result6" class="item"></div>
+
+</body>
+
+</html>
