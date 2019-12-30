@@ -5,7 +5,7 @@
     <style>
         * {
             font-family: monospace;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
     </style>
 
@@ -14,111 +14,74 @@
 </head>
 
 <body>
-    <div id="result1">
-    </div>
-    <div id="result2"></div>
-    <div id="result3"></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<div id="result1"></div>
+<div id="result2"></div>
+<div id="result3"></div>
+<div id="result4"></div>
+<div id="result5"></div>
+<div id="result6"></div>
+<div id="result7"></div>
+<div id="result8"></div>
+<div id="result9"></div>
+<div id="result10"></div>
+<div id="result11"></div>
+<div id="result12"></div>
+<div id="result13"></div>
+<div id="result14"></div>
+<div id="result15"></div>
+<div id="result16"></div>
+<div id="result17"></div>
+<div id="result18"></div>
     <script>
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            text += i + "<br>";
+        }
+        document.getElementById("result1").innerHTML = text;
+
+        var text = "";
+        for (var i = 5; i > 0; i--) {
+            text += i + "<br>";
+        }
+        document.getElementById("result2").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i <= 6; i = i + 2) {
+            text += i + "<br>";
+        }
+        document.getElementById("result3").innerHTML = text;
+
+        var text = "";
+        for (var i = 1; i <= 7; i = i + 2) {
+            text += i + "<br>";
+        }
+        document.getElementById("result4").innerHTML = text;
+
+        
+        var text = "";
+        for (var i = 9; i >= 5; i--) {
+            if (i === 8) {
+                continue;
+            }
+            text += i + "<br>";
+        }
+        document.getElementById("result5").innerHTML = text;
+
+        var text = "";
+        for (var i = 8; i >= 2; i = i - 2) {
+            text += i + "<br>";
+        }
+        document.getElementById("result6").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            if (i === 2) {
+                continue;
+            }
+            text += i + "<br>";
+        }
+        document.getElementById("result7").innerHTML = text;
+
         var text = "";
         for (var i = 0; i < 5; i++) {
             for (var j = 0; j < 5; j++) {
@@ -127,7 +90,7 @@
             }
             text += "<br>";
         }
-        document.getElementById("result1").innerHTML = text;
+        document.getElementById("result8").innerHTML = text;
 
         var text = "";
         for (var i = 0; i < 5; i++) {
@@ -137,7 +100,7 @@
             }
             text += "<br>";
         }
-        document.getElementById("result2").innerHTML = text;
+        document.getElementById("result9").innerHTML = text;
 
 
         var text = "";
@@ -148,8 +111,98 @@
             }
             text += "<br>";
         }
-        document.getElementById("result3").innerHTML = text;
+        document.getElementById("result10").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                text += "*";
+            }
+
+            for (var k = 0; k < 5 - i; k++) {
+                text += "#";
+            }
+            text += "<br>";
+        }
+        document.getElementById("result11").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                text += "#";
+            }
+
+            for (var k = 0; k < 5 - i; k++) {
+                text += "*";
+            }
+            text += "<br>";
+        }
+        document.getElementById("result12").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < i; j++) {
+                text += "&nbsp;";
+            }
+
+            for (var k = 0; k < 5 - i; k++) {
+                text += "*";
+            }
+            text += "<br>";
+        }
+        document.getElementById("result13").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 4-i; j++) {
+                text += "&nbsp;";
+            }
+            for (var k = 0; k <= i ; k++) {
+                text += "*";
+            }
+            text += "<br>";
+        }
+        document.getElementById("result14").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                text += j;
+            }
+            text += "<br>";
+        }
+        document.getElementById("result15").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = i; j < i+5; j++) {
+                text += j;
+            }
+            text += "<br>";
+        }
+        document.getElementById("result16").innerHTML = text;
+
+        var text = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                text += j;
+            }
+            text += "<br>";
+        }
+        document.getElementById("result17").innerHTML = text;
+
+        var text = "";
+        var k = 0;
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                text += k % 10;
+                k++;
+            }
+            text += "<br>";
+        }
+        document.getElementById("result18").innerHTML = text;
     </script>
+
 </body>
 
 </html>
