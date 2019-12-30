@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .item {
+            width: 50px;
+            height: 50px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 900;
+            font-size: 28px;
+            background-color: blue;
+            margin: 10px;
+            box-sizing: border-box;
+            border-radius: 50%;
+            box-shadow: 2px 4px 7px rgba(0,0,0,0.45);
+        }
+    </style>
+    <script>
+        function showRandom() {
+            var numbers = [];
+
+            console.log(numbers.length);
+
+            for (var i = 0; i < 6; i++) {
+                numbers.push(getRandom());
+            }
+
+            console.log(numbers.length);
+
+            var i = 1;
+            while (numbers.length > 0) {
+                var id = "result" + i;
+                i++;
+                document.getElementById(id).innerHTML = 
+                    numbers.pop();
+            }
+
+            // for (var i = 1; i <= 6; i++) {
+            //     var id = "result" + i;
+            //     document.getElementById(id).innerHTML =
+            //         numbers.pop();
+            // }
+
+            console.log(numbers.length);
+            
+        }
+
+        function getRandom() {
+            var random = Math.random();
+            random = random * 45;
+            random = Math.floor(random);
+            random = random + 1;
+            return random;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="showRandom()">새로운 수 출력</button>
+    <div id="result1" class="item"></div>
+    <div id="result2" class="item"></div>
+    <div id="result3" class="item"></div>
+    <div id="result4" class="item"></div>
+    <div id="result5" class="item"></div>
+    <div id="result6" class="item"></div>
+
+</body>
+
+</html>
