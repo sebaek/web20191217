@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <title>Document</title>
+    <style>
+        #key1 {
+            font-weight: bold;
+            font-size: 100px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#input1").keyup(function() {
+                var c = $(this).val();
+                c = c.charAt(c.length-1);
+                var key1 = $("#key1");
+                key1.text(c);
+                key1.show();
+                key1.fadeOut();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="input1">
+    <div id="key1"></div>
+</body>
+</html>
