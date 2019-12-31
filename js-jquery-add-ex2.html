@@ -11,15 +11,17 @@
     <script>
         $(function() {
             $("#btn1").click(function() {
-                var newelem = $("<b>");
-                newelem.text("앞에 추가");
-                $("#target").before(newelem);
+                var txt = $("#input1").val();
+                var newItem = $("<li />");
+                newItem.text(txt);
+                $("#result1").prepend(newItem);
             });
         });
     </script>
 </head>
 <body>
-    <button id="btn1">추가</button>
-    <p id="target">원래 텍스트</p>
+    <input type="text" id="input1">
+    <button id="btn1">➕</button>
+    <ul id="result1"></ul>
 </body>
 </html>
