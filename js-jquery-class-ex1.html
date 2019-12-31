@@ -17,11 +17,21 @@
             $("#btn1").click(function() {
                 $("div").addClass("blue");
             });
+
+            $("#btn2").click(function() {
+                $("div").removeClass("blue");
+            });
+
+            $("#btn3").click(function() {
+                $("div").toggleClass("blue");
+            });
         });
     </script>
 </head>
 <body>
     <button id="btn1">클래스 추가</button>
+    <button id="btn2">클래스 삭제</button>
+    <button id="btn3">클래스 토글</button>
     <div>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus velit perspiciatis illo voluptate. Sit inventore excepturi reprehenderit hic dolores quas praesentium cupiditate. Molestias maiores dolorum unde iste consequatur provident!
     </div>
