@@ -14,9 +14,14 @@
                 var txt = $("#input1").val();
                 var newItem = $("<li />");
                 newItem.text(txt);
-                newItem.click(function() {
-                    $(this).remove();
+
+                var removeBtn = $("<button />");
+                removeBtn.text("➖");
+                removeBtn.click(function() {
+                    $(this).parent().remove();
                 });
+                newItem.append(removeBtn);
+                
                 $("#result1").prepend(newItem);
             });
         });
