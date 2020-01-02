@@ -16,7 +16,7 @@
                 newItem.text(txt);
 
                 var removeBtn = $("<button />");
-                removeBtn.text("➖");
+                removeBtn.html("<i class='fas fa-minus'></i>");
                 removeBtn.click(function() {
                     $(this).parent().remove();
                 });
@@ -29,7 +29,7 @@
 </head>
 <body>
     <input type="text" id="input1">
-    <button id="btn1">➕</button>
+    <button id="btn1"><i class="fas fa-plus"></i></button>
     <ul id="result1"></ul>
 </body>
 </html>
